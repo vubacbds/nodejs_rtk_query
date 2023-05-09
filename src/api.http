@@ -1,0 +1,46 @@
+
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/6459b4cba9c823cbd0489e99
+ 
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title": "Sản phẩm demo 1",
+    "description": "Mô tả sản phẩm demo 1",
+    "images": ["https://yenxephuquang.vn/wp-content/uploads/2021/11/hinh-anh-xe-do-dep-doc-dao-moi-nhat-2022-1-1.jpg",
+        "https://sacbaongoc.net/wp-content/uploads/2022/06/300-anh-dai-dien-dep-cho-nu-che-mat-dep-ca-tinh-nhat-5-1024x1024.jpg",
+        "https://kiemtientuweb.com/ckfinder/userfiles/images/avatar-dep-ngau-nu/avatar-nu-24.jpg"]
+}
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title": "Sản phẩm demo 2",
+    "description": "Mô tả sản phẩm demo 2",
+    "images": ["https://vnn-imgs-a1.vgcloud.vn/znews-photo.zingcdn.me/w960/Uploaded/ohuokaa/2022_09_27/IMGC4685.jpg",
+        "https://sacbaongoc.net/wp-content/uploads/2022/06/300-anh-dai-dien-dep-cho-nu-che-mat-dep-ca-tinh-nhat-5-1024x1024.jpg",
+        "https://kiemtientuweb.com/ckfinder/userfiles/images/avatar-dep-ngau-nu/avatar-nu-24.jpg"]
+}
+
+###
+PUT http://localhost:5000/products/645a163baabb1cee68b007cc
+Content-Type: application/json
+
+{
+    "title": "Sản phẩm demo 1000",
+    "description": "Mô tả sản phẩm demo 10009",
+    "images": ["https://yenxephuquang.vn/wp-content/uploads/2021/11/hinh-anh-xe-do-dep-doc-dao-moi-nhat-2022-1-1.jpg",
+        "https://sacbaongoc.net/wp-content/uploads/2022/06/300-anh-dai-dien-dep-cho-nu-che-mat-dep-ca-tinh-nhat-5-1024x1024.jpg",
+        "https://kiemtientuweb.com/ckfinder/userfiles/images/avatar-dep-ngau-nu/avatar-nu-24.jpg"]
+}
+
+###
+DELETE http://localhost:5000/products/645a1428083d901a09348a9d
+
+
