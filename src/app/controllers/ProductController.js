@@ -6,7 +6,7 @@ class ProductController {
     await Product.find({})
       // .sort([["createdAt", "descending"]])
       .then((item) => {
-        res.status(200).json(item);
+        res.status(200).json([item, process.env.CLIENT_URL]);
       })
       .catch((er) => next(er));
   }
@@ -40,7 +40,7 @@ class ProductController {
   async update(req, res, next) {
     await Product.updateOne({ _id: req.params.id }, req.body)
       .then((item) => {
-        res.status(200).json([item, process.env.CLIENT_URL]);
+        res.status(200).json(item);
       })
       .catch((next) =>
         res.status(200).json({
