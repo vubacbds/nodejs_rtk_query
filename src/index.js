@@ -10,7 +10,7 @@ db.connect();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL ?? "http://localhost:300099",
+    origin: process.env.CLIENT_URL ?? "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
