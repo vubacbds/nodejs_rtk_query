@@ -40,7 +40,7 @@ class ProductController {
   async update(req, res, next) {
     await Product.updateOne({ _id: req.params.id }, req.body)
       .then((item) => {
-        res.status(200).json(item);
+        res.status(200).json([item, process.env.CLIENT_URL]);
       })
       .catch((next) =>
         res.status(200).json({
