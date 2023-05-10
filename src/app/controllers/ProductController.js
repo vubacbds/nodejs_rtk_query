@@ -6,7 +6,7 @@ class ProductController {
     await Product.find({})
       // .sort([["createdAt", "descending"]])
       .then((item) => {
-        res.status(200).json([item, process.env.CLIENT_URL]);
+        res.status(200).json(item);
       })
       .catch((er) => next(er));
   }
